@@ -633,8 +633,7 @@ function library:Load(opts)
 					    CornerRadius = UDim.new(0, 5),
 					    Parent = button
 					})
-                    
-                    button.AutoButtonColor = true
+                   
                     
                     local buttonTypes = utility.table()
 
@@ -654,6 +653,10 @@ function library:Load(opts)
                     
                     function buttonTypes:SetName(str)
                         title.Text = str
+                    end
+                    
+                    function buttonTypes:SetColor(r,g,b)
+                        button.BackgroundColor3 = Color3.fromRGB(r,g,b)            
                     end
 
 
